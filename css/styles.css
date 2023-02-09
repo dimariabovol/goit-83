@@ -37,6 +37,10 @@
 }
 
 /* Base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--color-primary);
   font-family: 'Open Sans', sans-serif;
@@ -54,6 +58,12 @@ h4,
 h5,
 h6 {
   margin-top: 0;
+}
+
+img {
+  display: block;
+  /* max-width: 100%;
+  height: auto; */
 }
 
 ul {
@@ -74,6 +84,24 @@ ul {
   background-color: #555; /* remove */
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 70px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
+
 .header-link {
   color: var(--color-primary-inverted);
   font-size: 12px;
@@ -87,6 +115,7 @@ ul {
 }
 
 .button-light {
+  padding: 12px 20px;
   color: var(--color-primary-inverted);
   font-size: 12px;
   line-height: 1.33;
@@ -106,7 +135,7 @@ ul {
 .hero-section {
   padding-top: 192px;
   padding-bottom: 206px;
-  background-color: var(--color-background-secondary); /* remove */
+  background-color: black; /* remove */
 }
 
 .socials-link {
@@ -160,6 +189,7 @@ ul {
   font-size: 11px;
   line-height: 1.36;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .section-tagline-light {
@@ -177,4 +207,109 @@ ul {
 
 .section-title-light {
   color: var(--color-primary-inverted);
+}
+
+/* About section */
+.about-container {
+  display: flex;
+  gap: 64px;
+}
+
+.about-images {
+  display: flex;
+  gap: 30px;
+}
+
+/* Prices section */
+.services-section {
+  background-color: black;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.services-item {
+  flex-basis: calc(100% / 2);
+  padding: 10px 40px;
+}
+
+.services-action {
+  display: flex;
+  justify-content: center;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-name {
+  margin-bottom: 0;
+}
+
+/* Masters section */
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.masters-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.master {
+  text-align: center;
+}
+
+/* Achivements section */
+.achivements-section {
+  padding-right: 75px;
+  padding-left: 100px;
+}
+
+.achivements-container {
+  display: flex;
+  gap: 130px;
+}
+
+.achivements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 330px;
+}
+
+.achivements-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.achivements-title {
+  max-width: 420px;
+}
+
+.point {
+  padding: 20px 24px;
+  background-color: var(--color-background-secondary);
+}
+
+.point-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.point-number {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
 }

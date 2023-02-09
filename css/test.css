@@ -1,0 +1,17 @@
+.parent {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 200px; */
+  height: 200px;
+  color: white;
+  background-color: brown;
+}
