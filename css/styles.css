@@ -44,7 +44,7 @@ html {
 body {
   color: var(--color-primary);
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.85;
   background-color: var(--color-background-primary);
@@ -135,10 +135,15 @@ ul {
 .hero-section {
   padding-top: 192px;
   padding-bottom: 206px;
-  background-color: black; /* remove */
+  background-color: var(--color-background-secondary);
+  background-image: url('../images/man-haircut.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.socials-link {
+.hero-socials-link {
   color: var(--color-primary);
   text-decoration: none;
 }
@@ -312,4 +317,41 @@ ul {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.35;
+}
+
+/* Masters section */
+.masters-section {
+  background-color: var(--color-background-secondary);
+}
+
+/* Socials */
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  fill: var(--color-primary-dark);
+  background-color: var(--color-primary-inverted);
+  border-radius: 50%;
+}
+
+.socials-link:hover {
+  fill: var(--color-brand);
+}
+
+.socials-icon {
+  width: 20px;
+  height: 20px;
 }
