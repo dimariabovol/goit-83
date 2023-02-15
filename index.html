@@ -34,7 +34,7 @@
             </ul>
           </nav>
           <a class="header-link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="button-light" type="button">онлайн-запис</button>
+          <button class="button" type="button">онлайн-запис</button>
         </div>
       </div>
     </header>
@@ -51,19 +51,22 @@
           <h1 class="hero-title">BarberShop</h1>
           <p class="hero-text">
             Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
-            та зі смаком. Ми експерти у модних чоловічих стрижках. Працюємо
-            швидко, обережно та зі смаком.Ми експерти у модних чоловічих
-            стрижках. Працюємо швидко, обережно та зі смаком.Ми експерти у
-            модних чоловічих стрижках. Працюємо швидко, обережно та зі смаком.
+            та зі смаком.
           </p>
-          <ul>
+          <ul class="carousel-controls">
             <li>
-              <button class="carousel-button" type="button" disabled>
+              <button
+                class="carousel-button carousel-prev"
+                type="button"
+                disabled
+              >
                 Назад
               </button>
             </li>
             <li>
-              <button class="carousel-button" type="button">Вперед</button>
+              <button class="carousel-button carousel-next" type="button">
+                Вперед
+              </button>
             </li>
           </ul>
         </div>
@@ -99,7 +102,9 @@
                 клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити
                 кожного, хто до нас приходить! Чекаємо на тебе!
               </p>
-              <button type="button">онлайн-запис</button>
+              <button class="button button-dark" type="button">
+                онлайн-запис
+              </button>
             </div>
           </div>
         </div>
@@ -161,7 +166,7 @@
             </li>
           </ul>
           <div class="services-action">
-            <button class="button-light" type="button">онлайн-запис</button>
+            <button class="button" type="button">онлайн-запис</button>
           </div>
         </div>
       </section>
@@ -286,6 +291,47 @@
               </ul> -->
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="section contact-section">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-form">
+              <p>Онлайн-запис</p>
+              <!-- Form -->
+            </div>
+            <div class="contact-info">
+              <h2 class="section-title section-title-light">Контакти</h2>
+              <address>
+                <ul>
+                  <li>
+                    <a class="contact-link" href="#">
+                      <svg class="contact-icon">
+                        <use href="./images/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильківська, 7А Київ, 08132
+                    </a>
+                  </li>
+                  <li>
+                    <a class="contact-link" href="tel:+380441111111">
+                      <svg class="contact-icon">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li>
+                    <a class="contact-link" href="mailto:barbershop@email.com">
+                      <svg class="contact-icon">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
         </div>
       </section>
     </main>
