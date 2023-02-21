@@ -1,17 +1,60 @@
-.parent {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+.parent,
+.child {
+  border: 1px dotted gray;
+  padding: 20px;
 }
 
-.box {
+.wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* width: 200px; */
-  height: 200px;
-  color: white;
-  background-color: brown;
+  gap: 40px;
+}
+
+.box.red {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  /* transform: translate(10px, 20px); */
+}
+
+.box.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: transform 1000ms, background-color 1000ms;
+  transform-origin: 0 0;
+}
+
+.box.green:hover {
+  transform: rotate(-90deg);
+  background-color: red;
+}
+
+.box.blue {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  transform: scale(1);
+  transition: transform 1000ms;
+  transform-origin: 0 0;
+}
+
+.box.blue {
+  transform: scale(2);
+}
+
+.box.orange {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  animation: skew 2000ms linear infinite alternate;
+}
+
+@keyframes skew {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
 }
