@@ -23,7 +23,9 @@
               <img src="./images/logo.svg" alt="BarberShop logo" />
             </a>
             <ul class="header-menu">
-              <li><a class="header-link" href="#about-section">Про нас</a></li>
+              <li>
+                <a class="header-link" href="#about-section">Про нас</a>
+              </li>
               <li>
                 <a class="header-link" href="#services-section"
                   >Послуги і ціни</a
@@ -34,41 +36,45 @@
             </ul>
           </nav>
           <a class="header-link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="button" type="button">онлайн-запис</button>
+          <button class="button" type="button" data-modal-open>
+            онлайн-запис
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero-section">
         <div class="container">
-          <ul>
-            <li><a class="hero-socials-link" href="#">Instagram</a></li>
-            <li><a class="hero-socials-link" href="#">Youtube</a></li>
-          </ul>
-          <p class="section-tagline section-tagline-light">
-            Чоловіча перукарня в Києві
-          </p>
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-text">
-            Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
-            та зі смаком.
-          </p>
-          <ul class="carousel-controls">
-            <li>
-              <button
-                class="carousel-button carousel-prev"
-                type="button"
-                disabled
-              >
-                Назад
-              </button>
-            </li>
-            <li>
-              <button class="carousel-button carousel-next" type="button">
-                Вперед
-              </button>
-            </li>
-          </ul>
+          <div class="hero-container">
+            <ul class="hero-socials">
+              <li><a class="hero-socials-link" href="#">Instagram</a></li>
+              <li><a class="hero-socials-link" href="#">Youtube</a></li>
+            </ul>
+            <p class="section-tagline section-tagline-light">
+              Чоловіча перукарня в Києві
+            </p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-text">
+              Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
+              та зі смаком.
+            </p>
+            <ul class="carousel-controls">
+              <li>
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  disabled
+                >
+                  Назад
+                </button>
+              </li>
+              <li>
+                <button class="carousel-button carousel-next" type="button">
+                  Вперед
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="section" id="about-section">
@@ -227,53 +233,128 @@
           <ul class="masters-list">
             <li class="masters-item">
               <div class="master">
-                <img src="./images/john.jpg" alt="John Smith" />
-                <h3 class="master-name">John Smith</h3>
-                <p class="master-job">Extreme Barber</p>
-                <ul class="socials-list">
-                  <li class="socials-item">
-                    <a class="socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <div class="master-image">
+                  <img src="./images/john.jpg" alt="John Smith" />
+                  <div class="master-description">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quis delectus veniam debitis aspernatur placeat?
+                      Distinctio, voluptate. Cumque fuga iste eum!
+                    </p>
+                  </div>
+                </div>
+                <div class="master-info">
+                  <h3 class="master-name">John Smith</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="masters-item">
               <div class="master">
                 <img src="./images/john.jpg" alt="John Smith" />
-                <h3>John Smith</h3>
-                <p>Extreme Barber</p>
+                <div class="master-info">
+                  <h3 class="master-name">John Smith</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="masters-item">
               <div class="master">
                 <img src="./images/john.jpg" alt="John Smith" />
-                <h3>John Smith</h3>
-                <p>Extreme Barber</p>
+                <div class="master-info">
+                  <h3 class="master-name">John Smith</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- <ul>
                 <li>
@@ -344,5 +425,30 @@
         </ul>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          Close
+        </button>
+        <h2>Modal title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          inventore necessitatibus voluptatum sit? Vero maxime iste
+          exercitationem voluptatum quam, ducimus deserunt fuga eius sed, cumque
+          sapiente, maiores alias nemo praesentium! Distinctio magni numquam
+          earum molestiae iure exercitationem minus officiis. Eveniet temporibus
+          veniam nisi suscipit veritatis impedit totam itaque perspiciatis quod
+          reiciendis officia maiores odit dicta unde ab, iusto odio animi
+          corrupti autem saepe sunt tempore quisquam libero accusantium! Quae
+          debitis molestias impedit ratione sint accusamus nisi dolores amet,
+          architecto maxime aut asperiores! Recusandae, corporis rerum? Repellat
+          deserunt in numquam culpa distinctio, voluptate pariatur adipisci sunt
+          ipsa facere officia amet! Ipsum.
+        </p>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

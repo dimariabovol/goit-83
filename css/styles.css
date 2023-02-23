@@ -87,8 +87,11 @@ ul {
 
 /* Header */
 .header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
   padding-top: 40px;
-  background-color: #555; /* remove */
 }
 
 .header-container {
@@ -110,12 +113,25 @@ ul {
 }
 
 .header-link {
+  position: relative;
+  padding: 24px 0;
   color: var(--color-primary-inverted);
   font-size: 12px;
   line-height: 1.33;
   font-weight: 600;
   text-decoration: none;
 }
+
+/* .header-link.current::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 2px;
+  content: '';
+} */
 
 .header-link:hover {
   color: var(--color-brand);
@@ -148,14 +164,39 @@ ul {
 
 /* Hero section */
 .hero-section {
-  padding-top: 192px;
-  padding-bottom: 206px;
   background-color: var(--color-background-secondary);
   background-image: url('../images/man-haircut.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.hero-container {
+  position: relative;
+  padding-top: 192px;
+  padding-bottom: 206px;
+  padding-left: 200px;
+}
+
+.hero-container::before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: calc(100% + 100px);
+  height: 100%;
+  background-color: var(--color-background-primary);
+  content: '';
+}
+
+.hero-socials {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  display: flex;
+  gap: 40px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
 }
 
 .hero-socials-link {
@@ -185,12 +226,17 @@ ul {
 
 /* Carousel */
 .carousel-controls {
+  position: absolute;
+  right: 55px;
+  bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 60px;
 }
 
 .carousel-button {
+  position: relative;
+  padding: 8px 0;
   color: var(--color-primary-inverted);
   font-size: 12px;
   line-height: 1.33;
@@ -201,21 +247,21 @@ ul {
 }
 
 .carousel-button::after {
-  display: block;
+  position: absolute;
+  bottom: 0;
   width: 60px;
   height: 1px;
-  margin-top: 8px;
   background-color: currentColor;
   content: '';
 }
 
-/* .carousel-prev::before {
-
+.carousel-prev::after {
+  left: 0;
 }
 
-.carousel-next::before {
-  
-} */
+.carousel-next::after {
+  right: 0;
+}
 
 .carousel-button[disabled] {
   color: var(--color-secondary-transparent);
@@ -392,6 +438,31 @@ ul {
   background-color: var(--color-background-secondary);
 }
 
+.master-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.master-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-primary-inverted);
+  background-color: var(--color-brand);
+  transform: translateY(100%);
+  transition: transform 250ms;
+}
+
+.master-image:hover .master-description {
+  transform: translateY(0);
+}
+
+.master-info {
+  padding: 30px 20px 0 20px;
+}
+
 /* Socials */
 .socials-list {
   display: flex;
@@ -457,4 +528,47 @@ ul {
 .contact-icon {
   width: 24px;
   height: 24px;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  max-width: 408px;
+  max-height: 576px;
+  height: 100%;
+  background-color: var(--color-background-primary);
+  transition: transform 500ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
