@@ -378,8 +378,49 @@
         <div class="container">
           <div class="contact-container">
             <div class="contact-form">
-              <p>Онлайн-запис</p>
-              <!-- Form -->
+              <p class="section-title section-title-light">Онлайн-запис</p>
+              <form class="form" name="contact-form">
+                <div class="form-container">
+                  <div class="form-field">
+                    <label class="visually-hidden" for="user-name">Ім`я*</label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      name="user-name"
+                      id="user-name"
+                      placeholder="Ім`я*"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label class="visually-hidden" for="user-phone"
+                      >Телефон*</label
+                    >
+                    <input
+                      class="form-input"
+                      type="tel"
+                      name="user-phone"
+                      id="user-phone"
+                      placeholder="Телефон*"
+                    />
+                  </div>
+
+                  <div class="form-textarea">
+                    <label class="form-label" for="user-message"
+                      >Повідомлення</label
+                    >
+                    <textarea
+                      class="form-input textarea"
+                      name="user-message"
+                      id="user-message"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button class="form-button button" type="submit">
+                  Відправити
+                </button>
+              </form>
             </div>
             <div class="contact-info">
               <h2 class="section-title section-title-light">Контакти</h2>
@@ -426,26 +467,21 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           Close
         </button>
         <h2>Modal title</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-          inventore necessitatibus voluptatum sit? Vero maxime iste
-          exercitationem voluptatum quam, ducimus deserunt fuga eius sed, cumque
-          sapiente, maiores alias nemo praesentium! Distinctio magni numquam
-          earum molestiae iure exercitationem minus officiis. Eveniet temporibus
-          veniam nisi suscipit veritatis impedit totam itaque perspiciatis quod
-          reiciendis officia maiores odit dicta unde ab, iusto odio animi
-          corrupti autem saepe sunt tempore quisquam libero accusantium! Quae
-          debitis molestias impedit ratione sint accusamus nisi dolores amet,
-          architecto maxime aut asperiores! Recusandae, corporis rerum? Repellat
-          deserunt in numquam culpa distinctio, voluptate pariatur adipisci sunt
-          ipsa facere officia amet! Ipsum.
-        </p>
+        <form name="contact-form" autocomplete="off" novalidate>
+          <label>Name</label>
+          <div class="test-form-field">
+            <input type="text" />
+            <svg class="socials-icon">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </div>
+        </form>
       </div>
     </div>
 
