@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
@@ -96,7 +97,9 @@
             </div>
             <div class="about-content">
               <h2 class="section-tagline">Про нас</h2>
-              <p class="section-title">Кращий Барбершоп твого міста</p>
+              <p class="section-title" data-aos="zoom-out-left">
+                Кращий Барбершоп твого міста
+              </p>
               <p>
                 Якщо ти дійсно хочеш додати у свій образ більше впевненості,
                 тобі точно до нас.
@@ -120,7 +123,12 @@
           <p class="section-tagline section-tagline-light">
             Проведи час у компанії кращих майстрів
           </p>
-          <h2 class="section-title section-title-light">Послуги і ціни</h2>
+          <h2
+            class="section-title section-title-light"
+            data-aos="zoom-out-right"
+          >
+            Послуги і ціни
+          </h2>
           <ul class="services-list">
             <li class="services-item">
               <div class="service">
@@ -379,7 +387,7 @@
           <div class="contact-container">
             <div class="contact-form">
               <p class="section-title section-title-light">Онлайн-запис</p>
-              <form class="form" name="contact-form">
+              <form class="form" name="contact-form" autocomplete="off">
                 <div class="form-container">
                   <div class="form-field">
                     <label class="visually-hidden" for="user-name">Ім`я*</label>
@@ -389,6 +397,7 @@
                       name="user-name"
                       id="user-name"
                       placeholder="Ім`я*"
+                      required
                     />
                   </div>
 
@@ -402,19 +411,34 @@
                       name="user-phone"
                       id="user-phone"
                       placeholder="Телефон*"
+                      pattern="^\+[0-9]{12}"
+                      title="Номер повинен складатися із 12 цифр"
                     />
                   </div>
 
                   <div class="form-textarea">
-                    <label class="form-label" for="user-message"
-                      >Повідомлення</label
-                    >
                     <textarea
                       class="form-input textarea"
                       name="user-message"
                       id="user-message"
                     ></textarea>
+                    <label class="form-label" for="user-message">
+                      Повідомлення
+                    </label>
                   </div>
+                </div>
+
+                <div class="form-checkbox">
+                  <input
+                    class="checkbox-input"
+                    id="terms-conditions"
+                    type="checkbox"
+                    name="terms-conditions"
+                  />
+                  <span class="checkbox-icon"></span>
+                  <label class="checkbox-label" for="terms-conditions">
+                    Lorem ipsum dolor sit amet consectetur
+                  </label>
                 </div>
 
                 <button class="form-button button" type="submit">
@@ -467,24 +491,20 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           Close
         </button>
         <h2>Modal title</h2>
-        <form name="contact-form" autocomplete="off" novalidate>
-          <label>Name</label>
-          <div class="test-form-field">
-            <input type="text" />
-            <svg class="socials-icon">
-              <use href="./images/icons.svg#icon-linkedin"></use>
-            </svg>
-          </div>
-        </form>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
