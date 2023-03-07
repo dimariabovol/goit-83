@@ -18,7 +18,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
+        <div class="header-container-desktop">
           <nav class="header-nav">
             <a href="#">
               <img src="./images/logo.svg" alt="BarberShop logo" />
@@ -36,10 +36,27 @@
               <li><a class="header-link" href="#">Контакти</a></li>
             </ul>
           </nav>
-          <a class="header-link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="button" type="button" data-modal-open>
-            онлайн-запис
+          <div class="header-contacts">
+            <a class="header-link" href="tel:+380441111111">
+              +38 044 111 11 11
+            </a>
+            <button class="button" type="button" data-modal-open>
+              онлайн-запис
+            </button>
+          </div>
+        </div>
+        <div class="header-container-mobile">
+          <a href="#">
+            <img src="./images/logo.svg" alt="BarberShop logo" />
+          </a>
+          <button class="header-burger js-open-menu" type="button">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-burger-menu"></use>
+            </svg>
           </button>
+        </div>
+        <div class="mobile-menu js-menu-container">
+          <button class="js-close-menu" type="button">Close</button>
         </div>
       </div>
     </header>
@@ -78,7 +95,7 @@
           </div>
         </div>
       </section>
-      <section class="section" id="about-section">
+      <!-- <section class="section" id="about-section">
         <div class="container">
           <div class="about-container">
             <div class="about-images">
@@ -117,8 +134,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="section services-section" id="services-section">
+      </section> -->
+      <!-- <section class="section services-section" id="services-section">
         <div class="container">
           <p class="section-tagline section-tagline-light">
             Проведи час у компанії кращих майстрів
@@ -183,8 +200,8 @@
             <button class="button" type="button">онлайн-запис</button>
           </div>
         </div>
-      </section>
-      <section class="section achivements-section">
+      </section> -->
+      <!-- <section class="section achivements-section">
         <div class="container">
           <div class="achivements-container">
             <ul class="achivements-list">
@@ -233,7 +250,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section masters-section">
         <div class="container">
           <p class="section-tagline">Для справжніх поціновувачів атмосфери</p>
@@ -289,7 +306,9 @@
             </li>
             <li class="masters-item">
               <div class="master">
-                <img src="./images/john.jpg" alt="John Smith" />
+                <div class="master-image">
+                  <img src="./images/john.jpg" alt="John Smith" />
+                </div>
                 <div class="master-info">
                   <h3 class="master-name">John Smith</h3>
                   <p class="master-job">Extreme Barber</p>
@@ -328,7 +347,9 @@
             </li>
             <li class="masters-item">
               <div class="master">
-                <img src="./images/john.jpg" alt="John Smith" />
+                <div class="master-image">
+                  <img src="./images/john.jpg" alt="John Smith" />
+                </div>
                 <div class="master-info">
                   <h3 class="master-name">John Smith</h3>
                   <p class="master-job">Extreme Barber</p>
@@ -364,25 +385,11 @@
                   </ul>
                 </div>
               </div>
-              <!-- <ul>
-                <li>
-                  <a href=""><img src="" alt="" /></a>
-                </li>
-                <li>
-                  <a href=""><img src="" alt="" /></a>
-                </li>
-                <li>
-                  <a href=""><img src="" alt="" /></a>
-                </li>
-                <li>
-                  <a href=""><img src="" alt="" /></a>
-                </li>
-              </ul> -->
             </li>
           </ul>
         </div>
       </section>
-      <section class="section contact-section">
+      <!-- <section class="section contact-section">
         <div class="container">
           <div class="contact-container">
             <div class="contact-form">
@@ -479,9 +486,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer>
+    <!-- <footer>
       <div class="container">
         <p>&copy; Copyright 2023</p>
         <ul>
@@ -489,7 +496,7 @@
           <li><a class="socials-link" href="#">Youtube</a></li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -500,6 +507,7 @@
       </div>
     </div> -->
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

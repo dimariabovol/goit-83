@@ -24,5 +24,8 @@
       <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8333" d="M16.667 8.667c0 4.667-6.667 8.833-6.667 8.833s-6.667-4.167-6.667-8.833c0-3.417 3-6.167 6.667-6.167s6.667 2.75 6.667 6.167v0z"></path>
       <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8333" d="M10 11.667c1.381 0 2.5-1.119 2.5-2.5s-1.119-2.5-2.5-2.5v0c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5v0z"></path>
     </symbol>
+    <symbol id="icon-burger-menu" viewBox="0 0 20 20">
+      <path d="M4 7.333v-1.333h12v1.333h-12zM4 10.667h12v-1.333h-12v1.333zM4 14h12v-1.333h-12v1.333z"></path>
+    </symbol>
   </defs>
 </svg>
