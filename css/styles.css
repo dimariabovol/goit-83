@@ -263,6 +263,14 @@ ul {
   background-attachment: fixed;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url('../images/man-haircut@2x.jpg');
+  }
+}
+
 .hero-container {
   position: relative;
   padding-top: 192px;
@@ -432,8 +440,22 @@ ul {
 }
 
 .about-images {
-  display: flex;
-  gap: 30px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-images {
+    flex-direction: row;
+  }
 }
 
 /* Services section */
